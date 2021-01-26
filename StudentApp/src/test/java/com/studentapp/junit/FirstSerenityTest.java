@@ -1,21 +1,12 @@
 package com.studentapp.junit;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-
-
-
 import io.restassured.RestAssured;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.serenitybdd.rest.SerenityRest;
-import net.thucydides.core.annotations.Manual;
-import net.thucydides.core.annotations.Pending;
 import net.thucydides.core.annotations.Title;
 
 @RunWith(SerenityRunner.class)
@@ -37,6 +28,7 @@ public class FirstSerenityTest {
 		.statusCode(200);
 	}
 	
+	@Ignore
 	@Test
 	public void thisIsaFailing(){
 		SerenityRest.given()
@@ -46,36 +38,11 @@ public class FirstSerenityTest {
 		.statusCode(500);
 	}
 	
-	@Pending
-	@Test
-	public void thisIsAPendingTest(){
-		
-	}
 	
 	@Ignore
 	@Test
 	public void thisIsASkippedTest(){
 		
-	}
-	
-
-	@Test
-	public void thisIsAtestWithError(){
-		System.out.println("This is an error"+(5/0));
-	}
-	
-	
-	@Test
-	public void fileDoesNotExist() throws IOException{
-		File file = new File("file.txt");
-		FileReader fr = new FileReader(file);
-		fr.close();
-	}
-	
-	@Manual
-	@Test
-	public void thisIsAManualTest() {
-	
 	}
 	
 	@Title("This test will get the information of all the students from the Student App")

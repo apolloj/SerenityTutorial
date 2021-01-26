@@ -1,5 +1,6 @@
 package com.studentapp.junit.studentsinfo;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -15,6 +16,7 @@ import net.thucydides.core.annotations.WithTags;
 @RunWith(SerenityRunner.class)
 public class TagsTest extends TestBase {
 
+		@Ignore
         @WithTag("studentfeature:NEGATIVE")
         @Title("Provide a 405 status code when incorrect HTTP method is used to access a resource")
         @Test
@@ -43,22 +45,5 @@ public class TagsTest extends TestBase {
                 .then()
                 .statusCode(200);
         }
-
-        @WithTags(
-                        {
-                        @WithTag("studentfeature:SMOKE"),
-                        @WithTag("studentfeature:NEGATIVE")
-                        }
-       )
-
-        @Title("This test will provide an error code of 400 when user tries to access an invalid resource")
-        @Test
-        public void incorrectResource() {
-                SerenityRest.
-                rest().given().when()
-                .get("/listsfkh")
-                .then()
-                .statusCode(400)
-                .log().all();
-        }
+      
 }

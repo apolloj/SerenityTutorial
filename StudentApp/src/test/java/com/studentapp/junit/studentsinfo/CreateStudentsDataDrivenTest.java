@@ -16,7 +16,7 @@ import net.thucydides.junit.annotations.Concurrent;
 import net.thucydides.junit.annotations.UseTestDataFrom;
 
 @Concurrent(threads="2x")
-@UseTestDataFrom("/home/iballo/StudentApp_8/StudentApp/src/test/resources/tesdata/studentinfo.csv")
+@UseTestDataFrom("src/test/resources/tesdata/studentinfo.csv")
 @RunWith(SerenityParameterizedRunner.class)
 public class CreateStudentsDataDrivenTest extends TestBase {
 	
