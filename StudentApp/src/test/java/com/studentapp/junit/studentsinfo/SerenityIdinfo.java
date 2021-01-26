@@ -26,58 +26,6 @@ public class SerenityIdinfo {
 		RestAssured.baseURI="http://localhost:8080/student";
 	}
 	
-	@Test
-	public void getAllStudents(){
-		SerenityRest.given()
-		.when()
-		.get("/list")
-		.then()
-		.log()
-		.all()
-		.statusCode(200);
-	}
-	
-	@Test
-	public void thisIsaFailing(){
-		SerenityRest.given()
-		.when()
-		.get("/list")
-		.then()
-		.statusCode(500);
-	}
-	
-	@Pending
-	@Test
-	public void thisIsAPendingTest(){
-		
-	}
-	
-	@Ignore
-	@Test
-	public void thisIsASkippedTest(){
-		
-	}
-	
-	@Ignore
-	@Test
-	public void thisIsAtestWithError(){
-		System.out.println("This is an error"+(5/0));
-	}
-	
-	
-	@Test
-	public void fileDoesNotExist() throws FileNotFoundException{
-		File file = new File("file.txt");
-		@SuppressWarnings({ "resource", "unused" })
-		FileReader fr = new FileReader(file);
-	}
-	
-	@Manual
-	@Test
-	public void thisIsAManualTest() {
-	
-	}
-	
 	@Title("This test will get the information of all the students from the Student App")
 	@Test
 	public void test01(){
@@ -90,5 +38,4 @@ public class SerenityIdinfo {
 		.statusCode(200);
 	}
 	
-
 }
