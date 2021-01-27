@@ -1,0 +1,2 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Tags test","Provide a 405 status code when incorrect HTTP method is used to access a resource","IGNORED","2021-01-26T22:31:15.148+01:00[Europe/Paris]","0.0","1.09"

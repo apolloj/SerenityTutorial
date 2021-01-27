@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"First serenity test","This is a skipped test","IGNORED","2021-01-26T22:30:57.536+01:00[Europe/Paris]","0.0","0.61"
+"First serenity test","This isa failing","IGNORED","2021-01-26T22:31:07.646+01:00[Europe/Paris]","0.0","0.94"
+"Tags test","Provide a 405 status code when incorrect HTTP method is used to access a resource","IGNORED","2021-01-26T22:31:15.148+01:00[Europe/Paris]","0.0","1.09"
