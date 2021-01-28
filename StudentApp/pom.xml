@@ -101,8 +101,8 @@
 				<version>2.18</version>
 				<configuration>
 					<includes>						
-						<include>**/StudentApp/**/*.java</include>
-						<include>**/StudentApp/*.java</include>
+						<include>**/studentapp/**/*.java</include>
+						<include>**/studentapp/*.java</include>
 					</includes>
 					<forkCount>2</forkCount>
 					<reuseForks>false</reuseForks>
